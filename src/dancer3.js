@@ -15,7 +15,7 @@ dancer3.prototype.step = function () {
 };
 
 dancer3.prototype.randomDancer = function() {
-  var imagesArray = ['haz2.jpg', 'haz1.png', 'haz3.png', 'virus.png'];
+  var imagesArray = ['haz1.png', 'haz2.png', 'haz3.png', 'sanitizer.png'];
 
   var randomNumber = function() {
     return Math.floor(Math.random() * Math.floor(4));
