@@ -1,13 +1,13 @@
-const dancer2 = function (top, left, timeBetweenSteps) {
+const dancer3 = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.oldStep = this.step();
   this.$node = $('<span class="dancer3"></span>');
 };
 
-dancer2.prototype = Object.create(makeDancer.prototype);
-dancer2.prototype.constructor = dancer2;
+dancer3.prototype = Object.create(makeDancer.prototype);
+dancer3.prototype.constructor = dancer3;
 
-dancer2.prototype.step = function () {
+dancer3.prototype.step = function () {
   makeDacner.prototype.step.call(this);
 
   this.$node.toggle();
