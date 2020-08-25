@@ -20,6 +20,7 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
+
     // make a dancer with a random position
 
 
@@ -38,3 +39,13 @@ $(document).ready(function() {
   });
 });
 
+
+// definding the onllick
+$('.lineUpButton').on('click', function(event) {
+  for ( var i = 0; i < window.dancers.length; i++) {
+    makeDancer.prototype.lineUp.call(window.dancers[i]);
+  }
+
+  // var lineupDancerFunctionName = $(this).data('lineupDancer');
+  // var lineUpDancerFunction = window[lineupDancerFunctionName];
+});
