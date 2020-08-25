@@ -26,25 +26,14 @@ $(document).ready(function() {
 
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
 
-    var dancer2 = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
-
-    var dancer3 = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
 
     // push the dancer into the dancer array
-    window.dancers.push(dancer)
+    window.dancers.push(dancer);
     $('.dancerFloor').append(dancer.$node);
   });
 });
