@@ -22,20 +22,30 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+
+
+
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
 
+    var dancer2 = new dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
 
-        // push the dancer into the dancer array
-        window.dancers.push(dancer)
+    var dancer3 = new dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+
+    // push the dancer into the dancer array
+    window.dancers.push(dancer)
     $('.dancerFloor').append(dancer.$node);
-=======
-    $('body').append(dancer.$node);
->>>>>>> parent of 0a2c4f9...  Converted to correct class patterm, got blink to work, added new dancers classes to to start working.
   });
 });
 
