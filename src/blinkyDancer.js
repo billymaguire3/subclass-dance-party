@@ -3,6 +3,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 // need to pass in arguments
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.oldStep = this.step;
+  this.$node.addClass('blinkyDancer').append('<img class="blinkyDancer" src="TP.jpg"/>');
+
 // this.$node = $('<')
 // this.hello()
 };

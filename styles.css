@@ -20,20 +20,41 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+
+.blinkyDancer{
   border:10px solid red;
-  border-radius:10px;
+
   position:absolute;
+  height: 130px;
+  width: 150px;
+
 }
+
 
 .dancer2{
   border:10px solid green;
   border-radius:10px;
   position:absolute;
+  height: 130px;
+  width: 150px;
+  transition: transform 3s linear;
+  transform-origin: top right;
+  transform-style: preserve-3D;
+  transform: rotate(360deg);
+  display: block;
+  margin: auto;
 }
 
 .dancer3{
   border:10px solid blue;
   border-radius:10px;
   position:absolute;
+  height: 130px;
+  width: 150px;
+}
+
+img {
+  /* background-position: 0 0; */
+  height: auto;
+  width: 100%;
 }
