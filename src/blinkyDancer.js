@@ -14,6 +14,7 @@ makeBlinkyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
 //calling/invoking make dancer in the contex of the blinky dancer.
   makeDancer.prototype.step.call(this);
+  this.$node.toggle('blinkyDancer');
 
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
