@@ -23,29 +23,28 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
+    var random1 = function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    };
 
 
 
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 1000
+      random1(1000, 2000)
     );
-
 
     // push the dancer into the dancer array
     window.dancers.push(dancer);
     $('.dancerFloor').append(dancer.$node);
   });
-});
 
+  $('.lineUpButton').on('click', function(event) {
+    for ( var i = 0; i < window.dancers.length; i++) {
 
-// definding the onllick
-$('.lineUpButton').on('click', function(event) {
-  for ( var i = 0; i < window.dancers.length; i++) {
-    makeDancer.prototype.lineUp.call(window.dancers[i]);
-  }
+      makeDancer.prototype.lineUp.call(window.dancers[i], (80 * i));
+    }
+  });
 
-  // var lineupDancerFunctionName = $(this).data('lineupDancer');
-  // var lineUpDancerFunction = window[lineupDancerFunctionName];
 });

@@ -11,11 +11,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 };
 
-
-// use jQuery to create an HTML <span> tag
-// makeDancer.prototype.$node = $('<span class="dancer"></span>');
-//to pseudoclassical
-
+// Convert from Functional Instantiation to Pseudoclassical
 
 makeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
@@ -23,14 +19,11 @@ makeDancer.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-// moved into prototype
-// dancer.step();
-
 
 makeDancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
-  //
+
   var styleSettings = {
     top: top,
     left: left
@@ -38,16 +31,13 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function(dancerArray) {
-  // for(var i = 0; i < dancerArray.length; i++) {
-  //   $(`"${dancerArray[i]}"`).css({"left":"2000px"});
-  alert('Works!');
+makeDancer.prototype.lineUp = function(space) {
+
+  var styleSettings = {
+    top: 500,
+    left: space,
+  };
+
+  this.$node.css(styleSettings);
+
 };
-
-
-
-// now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-// this one sets the position to some random default point within the body
-
-
-
